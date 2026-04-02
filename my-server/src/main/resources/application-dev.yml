@@ -1,0 +1,67 @@
+server:
+  port: 1234
+
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/wai_mai?serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: 123456
+
+  data:
+    redis:
+      port: 6379
+      host: localhost
+      database: 0
+
+# api文档设置密码
+#knife4j:
+#  basic:
+#    enable: true
+#    username: admin
+#    password: 123456
+
+ # 文件上传配置
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+# MyBatis配置
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true  # 下划线转驼峰
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.yang.entity
+
+yang:
+  jwt:
+    admin-secret-key: my-project-yang-2026-key-1234567890abcdef
+    admin-ttl: 720000011
+    admin-token-name: token
+
+    user-secret-key: my-project-yang-2026-key-1234567890abcdef02
+    user-ttl: 720000011
+    user-token-name: authentication
+
+# 文件上传配置
+
+
+  alioss:
+    endpoint: oss-cn-hangzhou.aliyuncs.com #阿里云OSS地区地址
+    access-key-id:  #你的账号ID
+    access-key-secret:   #你的账号密钥 不能泄露
+    bucket-name:  # 你的存储空间名字
+
+#配置日志输出级别
+logging:
+  level:
+    com:
+      yang:
+        mapper: debug #控制台可以看到 SQL 语句和参数
+        service: info
+        controller: info
+
+

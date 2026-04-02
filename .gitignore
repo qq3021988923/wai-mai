@@ -1,0 +1,82 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# 临时文件
+*.tmp
+*.bak
+*.swp
+*~
+.DS_Store
+
+# IDEA 配置（后端开发常用）
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse 配置
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# NetBeans 配置
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ========================= 前端通用（Vue/React/Angular） =========================
+# 依赖包（核心忽略项，npm install 可重新生成）
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 构建产物
+dist/
+build/
+out/
+*.local
+
+# 环境变量（包含敏感信息，如接口地址、密钥）
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 缓存文件
+.eslintcache
+*.swp
+*.swo
+.vscode/
+
+# 前端 IDE/编辑器配置
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.DS_Store
+Thumbs.db
+
+# ========================= 通用忽略项 =========================
+# 操作系统临时文件1
+*.pid
+*.seed
+*.pid.lock
+.svn/
+.git/
+.hg/
+.CVS/
